@@ -36,17 +36,17 @@ export const JokeComponent = ({
             value={editedText}
             onChange={(e) => setEditedText(e.target.value)}
           />
-          <button onClick={handleSave}>Save</button>
-          <button onClick={() => setIsEditing(false)}>Cancel</button>
+          <button onClick={handleSave} style={{backgroundColor:'blue', marginRight:10}}>Save</button>
+          <button onClick={() => setIsEditing(false)}style={{backgroundColor:'red', marginRight:10}}>Cancel</button>
         </div>
       ) : (
         <div>
           <p>{joke.joke}</p>
           <p>Rate: {joke.rate}</p>
-          <button onClick={() => increaseRates(joke.id)} className="btn btn-sm">👍</button>
-          <button onClick={() => decreaseRates(joke.id)} className="btn btn-sm">👎</button>
-          <button onClick={() => setIsEditing(true)} className="btn btn-sm btn-warning">Edit</button>
-          <button onClick={() => deleteJoke(joke.id)} className="btn btn-sm btn-danger">Delete</button>
+          <button onClick={() => increaseRates(joke.id)} className="btn btn-sm" style={{backgroundColor:'white', marginRight:10}}>👍</button>
+          <button onClick={() => decreaseRates(joke.id)} className="btn btn-sm" style={{backgroundColor:'white',marginRight:10}}>👎</button>
+          <button onClick={() => setIsEditing(true)} className="btn btn-sm btn-warning" style={{backgroundColor:'orange', marginRight:10}}>Edit</button>
+          <button onClick={() => deleteJoke(joke.id)} className="btn btn-sm btn-danger"style={{backgroundColor:'red', marginRight:10}}>Delete</button>
         </div>
       )}
     </div>
